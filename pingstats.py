@@ -34,9 +34,8 @@ def parse_ping_output(output, args):
     ping_data = {}
     i = 1
     output = output.split("\n")
-
+    output = output[1: -5]
     max_ping = args.max_pings if args.max_pings else len(output) - 1
-
     for ping in output[1: max_ping + 1]:
         parts = ping.split()
         ping_data[f"{i}"] = [parts[3], parts[4], parts[-2].split("=")[-1]]
