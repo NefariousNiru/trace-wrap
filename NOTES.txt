@@ -1,0 +1,11 @@
+Comparing the output of Ping and Traceroute reveals some important details:
+Here I have listed some points I observed.
+
+Ping
+1. Ping has a range of latency from 13ms to 40ms (Because ping measures RTT without intermediaries)
+2. Ping provides end-to-end latency from the request IP to the domain
+
+Traceroute
+1. Traceroute has latencies reaching greater than 200ms (Each intermediary - routers in this case, sends back a message which accounts for overhead)
+2. Traceroute has many intermediary hops and is more granular
+3. Can help in fixing router bottlenecks as it provides more insight
